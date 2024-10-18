@@ -1,22 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "inventory"
 
 #define clrscr() system("@cls||clear")
 
-typedef struct Item {
-  char name[20];
-  int qty;
-} Item;
-
-typedef struct Inventory {
-  struct Item *items;
-} Inventory;
 
 int main() {
-  Inventory inventory;
-  inventory.items = (Item*) malloc(100 * sizeof(Item));
-  Item sword = {"Sword", 1};
-  inventory.items[0] = sword;
+  initInventory();
   
   clrscr();
   printf("INVENTORY:\n");
