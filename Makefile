@@ -2,10 +2,10 @@ CC=gcc
 
 all: app run
 
-app: main.c
-	$(CC) -o app main.c
+app: src/main.c
+	$(CC) -o app src/main.c
 
-run:
+run: app
 	./app.exe
 
 clean:
