@@ -7,14 +7,13 @@
 
 int main() {
   clrscr();
-  initInventory();
-  AddItem((Item){"Sword", 1});
 
-  printf("INVENTORY:\n");
-  for (int i = 0; i < inventory.length; i++) {
-    Item item = inventory.items[i];
-    printf("- %d %s\n", item.qty, item.name);
-  }
+  InitInventory();
+  Item sword = {"Sword", 1};
+  AddItem(sword);
+  DisplayInventory();
+  RemoveItem(sword);
+  DisplayInventory();
 
   return 0;
 }
